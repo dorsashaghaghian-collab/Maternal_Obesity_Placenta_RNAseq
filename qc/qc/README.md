@@ -1,16 +1,37 @@
-# Quality Control
+# Raw Read Quality Control
 
-Raw sequencing reads were assessed using FastQC.
+## Overview
 
-Multiple FastQC reports were summarized using MultiQC to evaluate overall sequencing quality.
+Raw RNA-seq reads were evaluated before alignment to assess sequencing quality and identify potential technical issues.
 
-Quality parameters evaluated:
+## Quality Control Tools
+
+### FastQC
+
+FastQC was used to evaluate:
 
 - Per-base sequence quality
-- GC content
+- GC content distribution
 - Sequence length distribution
 - Adapter contamination
 - Sequence duplication levels
 
-Status:
-Completed
+### MultiQC
+
+MultiQC was used to aggregate FastQC reports from all sequencing samples into a single comprehensive report.
+
+## Output
+
+The complete MultiQC report is available below:
+
+- MultiQC HTML report: `multiqc_report.html`
+
+## Workflow Position
+
+FASTQ files  
+↓  
+FastQC  
+↓  
+MultiQC  
+↓  
+STAR alignment
