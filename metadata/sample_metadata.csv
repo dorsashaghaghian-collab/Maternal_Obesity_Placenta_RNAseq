@@ -1,0 +1,4 @@
+sample,SRR_accession,GSM_accession,condition,tissue,organism
+Sample_1,SRR23254363,GSM6998284,Control,Placenta,Mus_musculus
+Sample_2,SRR23254361,To_be_confirmed,To_be_confirmed,Placenta,Mus_musculus
+Sample_3,SRR23254356,To_be_confirmed,To_be_confirmed,Placenta,Mus_musculus
