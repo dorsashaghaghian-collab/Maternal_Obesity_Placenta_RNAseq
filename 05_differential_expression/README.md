@@ -3,10 +3,7 @@
 Differential expression analysis was performed using DESeq2.
 
 Comparison:
-Maternal obesity vs Control
+Maternal obesity vs control placenta samples.
 
-Input:
-Gene count matrix
-
-Output:
-Differentially expressed genes
+Significant genes were defined as:
+adjusted p-value < 0.05
