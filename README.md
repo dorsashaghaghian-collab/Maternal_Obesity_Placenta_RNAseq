@@ -1,7 +1,26 @@
-# RNA-seq Analysis of Mouse Placenta Transcriptome in Maternal Obesity
+# Transcriptomic Analysis of Mouse Placenta Reveals Molecular Alterations Associated with Maternal Obesity
 
 ## Project Overview
-This project focuses on the analysis of mouse placenta RNA-seq data to investigate transcriptomic changes associated with maternal obesity.
+
+Maternal obesity can influence placental function and fetal development through complex molecular mechanisms.
+In this project, publicly available mouse placental RNA-seq data were analyzed to identify transcriptional changes associated with maternal obesity using an end-to-end bioinformatics workflow.
+
+## Workflow Overview
+
+Raw RNA-seq reads
+↓
+Quality control
+↓
+Genome alignment
+↓
+Gene quantification
+↓
+Differential expression analysis
+↓
+Functional pathway analysis
+↓
+Biological interpretation
+
 ## Dataset Information
 Organism: Mus musculus
 
@@ -67,21 +86,23 @@ Differential expression analysis
 
 ## Bioinformatics Workflow
 
-1. Retrieval of raw sequencing data from NCBI SRA
-2. Quality assessment of raw reads using FastQC
-3. Aggregation of QC reports using MultiQC
-4. Alignment of reads to the mouse reference genome (GRCm39) using STAR
-5. Gene-level quantification using featureCounts
-6. Differential expression analysis using DESeq2
-7. Visualization and interpretation of transcriptomic changes
+The analysis pipeline included:
 
-## Tools Used
+1. Public RNA-seq data acquisition
+2. Quality control assessment
+3. Read alignment
+4. Gene quantification
+5. Differential expression analysis using DESeq2
+6. Expression visualization
+7. Gene Set Enrichment Analysis (GSEA)
+8. Candidate gene interpretation
+
 | Tool | Purpose |
 |---|---|
-| SRA Toolkit | FASTQ data retrieval |
-| FastQC | Raw sequencing quality control |
-| MultiQC | Aggregation of QC reports |
-| STAR | RNA-seq read alignment |
+| Galaxy | Bioinformatics analysis platform |
+| GENCODE | Mouse genome annotation |
+| DESeq2 | Differential expression analysis |
+| GSEA | Pathway-level analysis |
 
 ## Quality Control
 
@@ -120,29 +141,46 @@ Software used:
 - Galaxy
 
 ## Repository Structure
-├── metadata/
-├── reference/
-├── 02_quality_control/
-├── 03_alignment/
-├── 04_gene_quantification/
-├── 05_differential_expression/
-└── README.md
+01_data_acquisition/
+02_quality_control/
+03_alignment/
+04_gene_quantification/
+05_differential_expression/
+06_visualization/
+07_functional_analysis/
+08_candidate_gene_analysis/
+09_final_report/
 
-## Planned Downstream Analysis
+## Key Finding
 
-Future analyses include:
+Differential expression analysis identified Serpine2 as a significantly downregulated gene in maternal obesity placenta samples.
 
-- Differentially expressed gene identification
-- Volcano plot visualization
-- Heatmap generation
-- Gene ontology enrichment analysis
-- Pathway analysis
+Serpine2:
+- log2 Fold Change: -1.526
+- Adjusted p-value: 0.011
+
+This finding suggests potential alterations in extracellular matrix regulation and placental remodeling processes under maternal obesity conditions.
+
+## Results
+
+![Volcano Plot](06_visualization/Volcano_plot.png)
+
+![MA Plot](06_visualization/MA_plot.png)
+
 
 ## Data Availability
 
-Raw sequencing data are publicly available through NCBI Sequence Read Archive.
+Raw sequencing data are publicly available through NCBI Sequence Read Archive. NCBI SRA accession: SRP419408
 
 Study accession:
 SRP419408
 | Galaxy | Bioinformatics analysis platform |
 | GENCODE | Gene annotation |
+
+## Future Directions
+
+Future analyses may include:
+
+- Validation of Serpine2 expression in independent datasets
+- Integration with additional placental transcriptomic studies
+- Investigation of obesity-associated molecular pathways
